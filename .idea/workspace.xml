@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a718e9ee-b560-4566-bc5d-4fc4651eacfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" afterDir="false" />
->>>>>>> 968b72b8ed5b2c13ce9614eec6934e92d8c8b906
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,15 +74,12 @@
       <workItem from="1587059605412" duration="29000" />
       <workItem from="1587140199422" duration="76000" />
       <workItem from="1587140285999" duration="378000" />
-<<<<<<< HEAD
+      <workItem from="1587140688510" duration="10503000" />
       <workItem from="1587140688510" duration="4925000" />
       <workItem from="1587143520370" duration="2943000" />
       <workItem from="1587146830162" duration="486000" />
       <workItem from="1587147378402" duration="490000" />
       <workItem from="1587148020026" duration="70000" />
-=======
-      <workItem from="1587140688510" duration="8651000" />
->>>>>>> 968b72b8ed5b2c13ce9614eec6934e92d8c8b906
     </task>
     <servers />
   </component>
@@ -94,10 +87,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="721" y="191" width="468" height="717" key="#com.intellij.ide.util.MemberChooser" timestamp="1587148812022">
+    <state x="721" y="191" width="468" height="717" key="#com.intellij.ide.util.MemberChooser" timestamp="1587151803924">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="721" y="191" width="468" height="717" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587148812022" />
+    <state x="721" y="191" width="468" height="717" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587151803924" />
     <state width="1860" height="264" key="GridCell.Tab.0.bottom" timestamp="1587149736451">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
