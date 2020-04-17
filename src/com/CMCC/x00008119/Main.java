@@ -28,7 +28,7 @@ public class Main {
             case 4:
                 break;
             case 5:
-                CalculadoraImpuestos.mostrarTotales();
+                System.out.println("Mostrando totales..." + CalculadoraImpuestos.mostrarTotales());
                 break;
             case 0:
                 System.out.println("Saliendo...");
