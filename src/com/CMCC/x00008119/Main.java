@@ -1,26 +1,35 @@
 package com.CMCC.x00008119;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
-
+    static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
 	Empresa covid = new Empresa("Covid-19");
 	byte option = 0;
 	do {
-        System.out.println("Ingrese una opción:\n" +
+        System.out.print("Ingrese una opción:\n" +
                 "1. Agregar empleado.\n" +
                 "2. Despedir empleado.\n" +
                 "3. Ver lista de empleados.\n" +
                 "4. Calcular sueldo.\n" +
                 "5. Mostrar totales.\n" +
-                "0. Salir");
+                "0. Salir\n" +
+                "Su elección: ");
+        option = in.nextByte();in.nextLine();
 	    switch (option){
             case 1:
                 //covid.addEmpleado();
                 break;
-            case 2:
-                //covid.quitEmpleado();
+            case 2:try {
+                String auxNombreEmpleado;
+                System.out.print("Ingrese el nombre del empleado a despedir: ");
+                auxNombreEmpleado = in.nextLine();
+                covid.quitEmpleado(auxNombreEmpleado);
+            }catch (NotFoundEmployedException e){
+                System.out.println(e.getMessage());
+            }
                 break;
             case 3:
                 mostrarPlanilla(covid);
@@ -28,7 +37,7 @@ public class Main {
             case 4:
                 break;
             case 5:
-                System.out.println("Mostrando totales..." + CalculadoraImpuestos.mostrarTotales());
+                System.out.println("\nMostrando totales..." + CalculadoraImpuestos.mostrarTotales());
                 break;
             case 0:
                 System.out.println("Saliendo...");

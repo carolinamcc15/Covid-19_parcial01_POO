@@ -21,7 +21,14 @@ public class Empresa {
     public void addEmpleado(Empleado empleado){
 
     }
-    public void quitEmpleado(String empleado){
-
+    public void quitEmpleado(String empleado) throws NotFoundEmployedException {
+        boolean empleadoEncontrado = false;
+        for (Empleado e : planilla){
+            if (e.getNombre().equalsIgnoreCase(empleado))
+                empleadoEncontrado=true;
+        }
+        if (empleadoEncontrado)
+        planilla.removeIf(e -> (e.getNombre().equalsIgnoreCase(empleado)));
+        else throw new NotFoundEmployedException("El empleado no ha sido encontrado.\n");
     }
 }
