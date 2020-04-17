@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a718e9ee-b560-4566-bc5d-4fc4651eacfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empleado.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" afterDir="false" />
->>>>>>> 968b72b8ed5b2c13ce9614eec6934e92d8c8b906
->>>>>>> 9369ac14293a62648c10df11c17393891d0f1321
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,19 +74,12 @@
       <workItem from="1587059605412" duration="29000" />
       <workItem from="1587140199422" duration="76000" />
       <workItem from="1587140285999" duration="378000" />
-<<<<<<< HEAD
       <workItem from="1587140688510" duration="10503000" />
-=======
-<<<<<<< HEAD
       <workItem from="1587140688510" duration="4925000" />
       <workItem from="1587143520370" duration="2943000" />
       <workItem from="1587146830162" duration="486000" />
       <workItem from="1587147378402" duration="490000" />
       <workItem from="1587148020026" duration="70000" />
-=======
-      <workItem from="1587140688510" duration="8651000" />
->>>>>>> 968b72b8ed5b2c13ce9614eec6934e92d8c8b906
->>>>>>> 9369ac14293a62648c10df11c17393891d0f1321
     </task>
     <servers />
   </component>
