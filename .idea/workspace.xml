@@ -4,7 +4,6 @@
     <list default="true" id="a718e9ee-b560-4566-bc5d-4fc4651eacfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +73,15 @@
       <workItem from="1587140199422" duration="76000" />
       <workItem from="1587140285999" duration="378000" />
       <workItem from="1587140688510" duration="4925000" />
+      <workItem from="1587143520370" duration="2943000" />
+      <workItem from="1587146830162" duration="486000" />
+      <workItem from="1587147378402" duration="490000" />
+      <workItem from="1587148020026" duration="70000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="721" y="191" width="468" height="717" key="#com.intellij.ide.util.MemberChooser" timestamp="1587141388190">
@@ -105,10 +108,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="329" y="77" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587143134424" />
-    <state x="337" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1587059606577">
+    <state x="337" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1587148018853">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1587059606577" />
+    <state x="337" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1587148018853" />
     <state x="672" y="426" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587140267506">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
