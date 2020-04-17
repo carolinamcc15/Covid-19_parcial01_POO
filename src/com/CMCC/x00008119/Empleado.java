@@ -26,11 +26,26 @@ public abstract class Empleado {
     public ArrayList<Documento> getDocumentos() {
         return documentos;
     }
-    public void addDocumento(Documento documento){
-
+    public void addDocumento(Documento documento) throws AlreadyExistDocumentException {
+        boolean documentoExistente = false;
+        for (Documento doc : documentos){
+            if (doc.getNombre().equalsIgnoreCase(documento.getNombre()))
+                documentoExistente = true;
+        }
+        if (documentoExistente)
+            throw new AlreadyExistDocumentException("Ya existe un documento con ese nombre.");
+        else
+        documentos.add(documento);
     }
-    public void removeDocumento(String documento){
-
+    public void removeDocumento(String documento) throws NotFoundDocumentException {
+        boolean documentoEncontrado = false;
+        for(Documento doc : documentos){
+            if (doc.getNombre().equalsIgnoreCase(documento))
+                documentoEncontrado=true;
+        }
+        if (documentoEncontrado)
+            documentos.removeIf(s->s.getNombre().equalsIgnoreCase(documento));
+        else throw new NotFoundDocumentException("El documento no ha sido encontrado.\n");
     }
 
     public double getSalario() {
