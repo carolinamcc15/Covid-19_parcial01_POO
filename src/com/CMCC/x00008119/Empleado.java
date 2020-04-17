@@ -27,7 +27,6 @@ public abstract class Empleado {
         return documentos;
     }
     public void addDocumento(Documento documento){
-
     }
     public void removeDocumento(String documento){
 

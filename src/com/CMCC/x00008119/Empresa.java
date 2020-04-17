@@ -18,9 +18,11 @@ public class Empresa {
     public ArrayList<Empleado> getPlanilla() {
         return planilla;
     }
+
     public void addEmpleado(Empleado empleado){
 
     }
+
     public void quitEmpleado(String empleado) throws NotFoundEmployedException {
         boolean empleadoEncontrado = false;
         for (Empleado e : planilla){
