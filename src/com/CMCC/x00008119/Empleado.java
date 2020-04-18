@@ -26,40 +26,36 @@ public abstract class Empleado {
     public ArrayList<Documento> getDocumentos() {
         return documentos;
     }
-<<<<<<< HEAD
-    public void addDocumento(Documento documento){
-    }
-    public void removeDocumento(String documento){
 
-=======
-    public void addDocumento(Documento documento) throws AlreadyExistDocumentException {
-        boolean documentoExistente = false;
-        for (Documento doc : documentos){
-            if (doc.getNombre().equalsIgnoreCase(documento.getNombre()))
+/*
+        public void addDocumento (Documento documento) throws AlreadyExistDocumentException {
+            boolean documentoExistente = false;
+            for (Documento doc : documentos) {
+                if (doc.getNombre().equalsIgnoreCase(documento.getNombre())) ;
                 documentoExistente = true;
+            }
+            if (documentoExistente)
+                throw new AlreadyExistDocumentException("Ya existe un documento con ese nombre.");
+            else
+                documentos.add(documento);
         }
-        if (documentoExistente)
-            throw new AlreadyExistDocumentException("Ya existe un documento con ese nombre.");
-        else
-        documentos.add(documento);
-    }
-    public void removeDocumento(String documento) throws NotFoundDocumentException {
-        boolean documentoEncontrado = false;
-        for(Documento doc : documentos){
-            if (doc.getNombre().equalsIgnoreCase(documento))
-                documentoEncontrado=true;
+
+        public void removeDocumento (String documento) throws NotFoundDocumentException {
+            boolean documentoEncontrado = false;
+            for (Documento doc : documentos) {
+                if (doc.getNombre().equalsIgnoreCase(documento))
+                    documentoEncontrado = true;
+            }
+            if (documentoEncontrado)
+                documentos.removeIf(s -> s.getNombre().equalsIgnoreCase(documento));
+            else throw new NotFoundDocumentException("El documento no ha sido encontrado.\n");
         }
-        if (documentoEncontrado)
-            documentos.removeIf(s->s.getNombre().equalsIgnoreCase(documento));
-        else throw new NotFoundDocumentException("El documento no ha sido encontrado.\n");
->>>>>>> 814c21b1c1a3fcc3f2de0e28cef05f24b0a9cc38
-    }
+*/
+        public double getSalario () {
+            return salario;
+        }
 
-    public double getSalario() {
-        return salario;
+        public void setSalario ( double salario){
+            this.salario = salario;
+        }
     }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-}

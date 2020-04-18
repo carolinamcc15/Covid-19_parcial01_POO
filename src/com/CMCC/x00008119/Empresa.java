@@ -20,7 +20,7 @@ public class Empresa {
     }
 
     public void addEmpleado(Empleado empleado){
-
+    planilla.add(empleado);
     }
 
     public void quitEmpleado(String empleado) throws NotFoundEmployedException {
