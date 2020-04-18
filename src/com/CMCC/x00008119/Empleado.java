@@ -27,7 +27,6 @@ public abstract class Empleado {
         return documentos;
     }
 
-/*
         public void addDocumento (Documento documento) throws AlreadyExistDocumentException {
             boolean documentoExistente = false;
             for (Documento doc : documentos) {
@@ -50,7 +49,7 @@ public abstract class Empleado {
                 documentos.removeIf(s -> s.getNombre().equalsIgnoreCase(documento));
             else throw new NotFoundDocumentException("El documento no ha sido encontrado.\n");
         }
-*/
+
         public double getSalario () {
             return salario;
         }
