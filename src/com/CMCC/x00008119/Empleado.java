@@ -30,7 +30,7 @@ public abstract class Empleado {
         public void addDocumento (Documento documento) throws AlreadyExistDocumentException {
             boolean documentoExistente = false;
             for (Documento doc : documentos) {
-                if (doc.getNombre().equalsIgnoreCase(documento.getNombre())) ;
+                if (doc.getNombre().equalsIgnoreCase(documento.getNombre()))
                 documentoExistente = true;
             }
             if (documentoExistente)

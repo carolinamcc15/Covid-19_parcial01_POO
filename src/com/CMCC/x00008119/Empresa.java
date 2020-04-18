@@ -31,6 +31,6 @@ public class Empresa {
         }
         if (empleadoEncontrado)
         planilla.removeIf(e -> (e.getNombre().equalsIgnoreCase(empleado)));
-        else throw new NotFoundEmployedException("El empleado no ha sido encontrado.\n");
+        else throw new NotFoundEmployedException("El empleado no se encuentra en la planilla.\n");
     }
 }
