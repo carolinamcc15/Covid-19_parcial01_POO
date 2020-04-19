@@ -1,12 +1,14 @@
 package com.CMCC.x00008119;
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
+        in.useLocale(Locale.US); //Permite el uso de '.' como separador decimal
         Empresa covid = new Empresa("Covid-19");
-        byte option, op = 0;
+        byte option, op;
         do {
             System.out.print("\nIngrese una opción:\n" +
                     "1. Agregar empleado.\n" +
@@ -17,7 +19,6 @@ public class Main {
                     "0. Salir\n" +
                     "Su elección: ");
             option = in.nextByte(); in.nextLine();
-
             switch (option) {
                 case 1:
                     try{
@@ -25,30 +26,19 @@ public class Main {
                     op = in.nextByte(); in.nextLine();
                     switch(op){
                         case 1:
-                            try {
                                 covid.addEmpleado(insertEmployed(1));
-                            }
-                            catch (InvalidSalaryException i){
-                                System.out.println(i.getMessage());
-                        }
-                            //Aún así el programa finaliza
-                            catch (InputMismatchException i){
-                                System.out.println("Hubo un error al ingresar los datos");
-                            }
                             break;
                         case 2:
-                            try {
                                 covid.addEmpleado(insertEmployed(2));
-                            }
-                            catch (InvalidSalaryException i){
-                                System.out.println(i.getMessage());
-                            }
                             break;
                         default:
                             System.out.println("La opción que ingresó es inválida");
                             break;
                     }
-                    } catch (AlreadyExistDocumentException e){
+                    }catch (InputMismatchException e){
+                        System.out.println("Datos numericos invalidos." + "\nEl ingreso de usuario ha sido abortado.");
+                        in.nextLine();// Limpia el Scanner para evitar generar otra excepcion
+                    } catch (AlreadyExistDocumentException|InvalidSalaryException|EmptyFieldException e){
                         System.out.println(e.getMessage() + "\nEl ingreso de usuario ha sido abortado.");
                     }
                     break;
@@ -58,17 +48,19 @@ public class Main {
                         System.out.print("Ingrese el nombre del empleado a despedir: ");
                         auxNombreEmpleado = in.nextLine();
                         covid.quitEmpleado(auxNombreEmpleado);
-                    } catch (NotFoundEmployedException e) {
+                        System.out.println("El empleado " + auxNombreEmpleado + " ha sido despedido.");
+                    } catch (NotFoundEmployedException| EmptyFieldException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
-
                 case 3:
                     mostrarPlanilla(covid);
                     break;
-
-                case 4:
+                case 4:try {
                     calculateSalary(covid);
+                }catch (EmptyFieldException e){
+                    System.out.println(e.getMessage());
+                }
                     break;
                 case 5:
                     System.out.println("\nMostrando totales..." + CalculadoraImpuestos.mostrarTotales());
@@ -83,12 +75,12 @@ public class Main {
         } while (option != 0);
 
     }
-        public static void mostrarPlanilla(Empresa e){
-            System.out.println("\nMostrando lista de empleados de " + e.getNombre() + ":");
-            for (Empleado empleado : e.getPlanilla()) {
+        public static void mostrarPlanilla(Empresa empresa){
+            System.out.println("\nMostrando lista de empleados de " + empresa.getNombre() + ":");
+            for (Empleado empleado : empresa.getPlanilla()) {
                 System.out.println("Nombre: " + empleado.getNombre()
                         + "\n\tPuesto: " + empleado.getPuesto()
-                        + "\n\tSalario: $" + empleado.getSalario());
+                        + "\n\tSalario: $" + String.format("%.2f",empleado.getSalario()));
                 if (empleado instanceof ServicioProfesional)
                     System.out.println("\tMeses de contrato: " + ((ServicioProfesional) empleado).getMeses());
                 else
@@ -101,20 +93,21 @@ public class Main {
         }
 
     //Busca empleado ingresado por el usuario y descuenta los impuestos
-        public static void calculateSalary(Empresa empresa){
+        public static void calculateSalary(Empresa empresa) throws EmptyFieldException{
             System.out.print("Ingrese el nombre del empleado: ");
             String nombre = in.nextLine();
+            if (nombre.isEmpty())
+                throw new EmptyFieldException("Debe ingresar un nombre.");
             for(Empleado empleado : empresa.getPlanilla()){
                 if(empleado.getNombre().equalsIgnoreCase(nombre)) {
-                    DecimalFormat dosDecimales = new DecimalFormat("#.##");
                     System.out.print("Sueldo con descuentos: $");
-                    System.out.print(dosDecimales.format(CalculadoraImpuestos.calcularPago(empleado))+"\n");
+                    System.out.print(String.format("%.2f",CalculadoraImpuestos.calcularPago(empleado))+"\n");
                 }
                 else
                     System.out.println("El empleado no se encuentra en la planilla.");
             }
         }
-        public static PlazaFija requestPlazaFija(){
+        public static PlazaFija requestPlazaFija() throws EmptyFieldException{
             String nombre,puesto;
             double salario;
             int extension;
@@ -124,12 +117,13 @@ public class Main {
             puesto = in.nextLine();
             System.out.print("Salario: $");
             salario = in.nextDouble();in.nextLine();
-
             System.out.print("Extensión: ");
             extension = in.nextInt();in.nextLine();
-            return new PlazaFija(nombre,puesto,salario,extension);
+            if (nombre.isEmpty()|| puesto.isEmpty() || salario ==0 || extension==0 )
+               throw new EmptyFieldException("Se han detectado campos vacios");
+            else return new PlazaFija(nombre,puesto,salario,extension);
         }
-        public static ServicioProfesional requestServicioProfesional(){
+        public static ServicioProfesional requestServicioProfesional() throws EmptyFieldException {
             String nombre, puesto;
             double salario;
             int mesesDeContrato;
@@ -142,12 +136,14 @@ public class Main {
                 in.nextLine();
             System.out.print("Meses de contrato: ");
             mesesDeContrato = in.nextInt();in.nextLine();
-        return new ServicioProfesional(nombre,puesto,salario,mesesDeContrato);
+            if (nombre.isEmpty()|| puesto.isEmpty() || salario ==0 || mesesDeContrato==0 )
+                throw new EmptyFieldException("Se han detectado campos vacios");
+            else return new ServicioProfesional(nombre,puesto,salario,mesesDeContrato);
         }
 
-        public static Empleado insertEmployed(int option) throws AlreadyExistDocumentException {
+        public static Empleado insertEmployed(int option) throws AlreadyExistDocumentException, EmptyFieldException {
             Empleado employed;
-            String nombreDocumento="", numeroDocumento="";
+            String nombreDocumento, numeroDocumento;
             byte cont=0;
             if(option == 1){
                 employed = requestPlazaFija();

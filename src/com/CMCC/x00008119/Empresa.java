@@ -26,8 +26,10 @@ public class Empresa {
         throw new InvalidSalaryException("\nHubo un error. El salario ingresado no es válido");
     }
 
-    public void quitEmpleado(String empleado) throws NotFoundEmployedException {
+    public void quitEmpleado(String empleado) throws NotFoundEmployedException, EmptyFieldException {
         boolean empleadoEncontrado = false;
+        if (empleado.isEmpty())
+            throw new EmptyFieldException("Debe ingresar un nombre.");
         for (Empleado e : planilla){
             if (e.getNombre().equalsIgnoreCase(empleado))
                 empleadoEncontrado=true;

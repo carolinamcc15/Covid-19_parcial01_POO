@@ -39,8 +39,8 @@ public final class CalculadoraImpuestos {
         return pago;
     }
     public static String mostrarTotales(){
-        return    "\nTotal de renta: $" + totalRenta
-                + "\nTotal ISSS:     $" + totalISSS
-                + "\nTotal de AFP:   $" + totalAFP;
+        return    "\nTotal de renta: $" + String.format("%.2f", totalRenta)
+                + "\nTotal ISSS:     $" + String.format("%.2f", totalISSS)
+                + "\nTotal de AFP:   $" + String.format("%.2f", totalAFP);
     }
 }
