@@ -19,11 +19,8 @@ public class Empresa {
         return planilla;
     }
 
-    public void addEmpleado(Empleado empleado) throws InvalidSalaryException {
-        if (empleado.getSalario()>0)
+    public void addEmpleado(Empleado empleado) {
         planilla.add(empleado);
-        else
-        throw new InvalidSalaryException("\nHubo un error. El salario ingresado no es válido");
     }
 
     public void quitEmpleado(String empleado) throws NotFoundEmployedException, EmptyFieldException {

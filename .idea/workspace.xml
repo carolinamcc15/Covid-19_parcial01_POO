@@ -3,21 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a718e9ee-b560-4566-bc5d-4fc4651eacfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/META-INF/Parcial 1 POO.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/META-INF/Parcial 1 POO.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/CalculadoraImpuestos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/CalculadoraImpuestos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Documento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Documento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Empleado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Empleado.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Empresa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/InvalidSalaryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/InvalidSalaryException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/EmptyFieldException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/EmptyFieldException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/InvalidSalaryException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parcial 1 POO/com/CMCC/x00008119/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/CalculadoraImpuestos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/InvalidSalaryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/InvalidSalaryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/InvalidSalaryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/InvalidNumberException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/CMCC/x00008119/Main.java" afterDir="false" />
->>>>>>> 03d737bdbaca8a30e92182f8b4ab7be6dc316860
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,49 +119,26 @@
     </state>
     <state x="481" y="127" width="327" height="478" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1587165208543" />
     <state x="721" y="191" width="652" height="717" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587194483175" />
-<<<<<<< HEAD
-    <state width="1237" height="34" key="GridCell.Tab.0.bottom" timestamp="1587270625424">
+    <state width="1237" height="69" key="GridCell.Tab.0.bottom" timestamp="1587325142274">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="34" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1587270625424" />
-    <state width="1860" height="755" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587200506794" />
-    <state width="1237" height="34" key="GridCell.Tab.0.center" timestamp="1587270625419">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="34" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1587270625419" />
-    <state width="1860" height="755" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587200506794" />
-    <state width="1237" height="34" key="GridCell.Tab.0.left" timestamp="1587270625419">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="34" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1587270625419" />
-    <state width="1860" height="755" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587200506794" />
-    <state width="1237" height="34" key="GridCell.Tab.0.right" timestamp="1587270625419">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="34" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1587270625419" />
-    <state width="1860" height="755" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587200506794" />
-=======
-    <state width="1860" height="755" key="GridCell.Tab.0.bottom" timestamp="1587272080533">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1587255505725" />
+    <state width="1237" height="69" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1587325142274" />
     <state width="1860" height="755" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587272080533" />
-    <state width="1860" height="755" key="GridCell.Tab.0.center" timestamp="1587272080533">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1237" height="69" key="GridCell.Tab.0.center" timestamp="1587325142274">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1587255505725" />
+    <state width="1237" height="69" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1587325142274" />
     <state width="1860" height="755" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587272080533" />
-    <state width="1860" height="755" key="GridCell.Tab.0.left" timestamp="1587272080532">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1237" height="69" key="GridCell.Tab.0.left" timestamp="1587325142274">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1587255505725" />
+    <state width="1237" height="69" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1587325142274" />
     <state width="1860" height="755" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587272080532" />
-    <state width="1860" height="755" key="GridCell.Tab.0.right" timestamp="1587272080533">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1237" height="69" key="GridCell.Tab.0.right" timestamp="1587325142274">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1587255505725" />
+    <state width="1237" height="69" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1587325142274" />
     <state width="1860" height="755" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587272080533" />
->>>>>>> 03d737bdbaca8a30e92182f8b4ab7be6dc316860
     <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1587255505725">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -196,15 +166,11 @@
     <state x="337" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1587273778473">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-<<<<<<< HEAD
-    <state x="337" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1587273778473" />
-=======
     <state x="337" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1587247701764" />
     <state x="540" y="238" key="run.anything.popup" timestamp="1587271546646">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="540" y="238" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587271546646" />
->>>>>>> 03d737bdbaca8a30e92182f8b4ab7be6dc316860
     <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1587199597208">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
