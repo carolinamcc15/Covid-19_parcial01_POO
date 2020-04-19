@@ -1,4 +1,6 @@
 package com.CMCC.x00008119;
+import java.text.DecimalFormat;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
     static Scanner in = new Scanner(System.in);
@@ -14,8 +16,8 @@ public class Main {
                     "5. Mostrar totales.\n" +
                     "0. Salir\n" +
                     "Su elección: ");
-            option = in.nextByte();
-            in.nextLine();
+            option = in.nextByte(); in.nextLine();
+
             switch (option) {
                 case 1:
                     try{
@@ -23,10 +25,24 @@ public class Main {
                     op = in.nextByte(); in.nextLine();
                     switch(op){
                         case 1:
+                            try {
                                 covid.addEmpleado(insertEmployed(1));
+                            }
+                            catch (InvalidSalaryException i){
+                                System.out.println(i.getMessage());
+                        }
+                            //Aún así el programa finaliza
+                            catch (InputMismatchException i){
+                                System.out.println("Hubo un error al ingresar los datos");
+                            }
                             break;
                         case 2:
-                                 covid.addEmpleado(insertEmployed(2));
+                            try {
+                                covid.addEmpleado(insertEmployed(2));
+                            }
+                            catch (InvalidSalaryException i){
+                                System.out.println(i.getMessage());
+                            }
                             break;
                         default:
                             System.out.println("La opción que ingresó es inválida");
@@ -68,7 +84,7 @@ public class Main {
 
     }
         public static void mostrarPlanilla(Empresa e){
-            System.out.println("Mostrando lista de empleados de " + e.getNombre() + ":");
+            System.out.println("\nMostrando lista de empleados de " + e.getNombre() + ":");
             for (Empleado empleado : e.getPlanilla()) {
                 System.out.println("Nombre: " + empleado.getNombre()
                         + "\n\tPuesto: " + empleado.getPuesto()
@@ -90,8 +106,12 @@ public class Main {
             String nombre = in.nextLine();
             for(Empleado empleado : empresa.getPlanilla()){
                 if(empleado.getNombre().equalsIgnoreCase(nombre)) {
-                    System.out.println("Sueldo con descuentos: $" + CalculadoraImpuestos.calcularPago(empleado));
+                    DecimalFormat dosDecimales = new DecimalFormat("#.##");
+                    System.out.print("Sueldo con descuentos: $");
+                    System.out.print(dosDecimales.format(CalculadoraImpuestos.calcularPago(empleado))+"\n");
                 }
+                else
+                    System.out.println("El empleado no se encuentra en la planilla.");
             }
         }
         public static PlazaFija requestPlazaFija(){
@@ -104,6 +124,7 @@ public class Main {
             puesto = in.nextLine();
             System.out.print("Salario: $");
             salario = in.nextDouble();in.nextLine();
+
             System.out.print("Extensión: ");
             extension = in.nextInt();in.nextLine();
             return new PlazaFija(nombre,puesto,salario,extension);
@@ -116,29 +137,35 @@ public class Main {
             nombre = in.nextLine();
             System.out.print("Puesto: ");
             puesto = in.nextLine();
-            System.out.print("Salario: $");
-            salario = in.nextDouble();in.nextLine();
+                System.out.print("Salario: $");
+                salario = in.nextDouble();
+                in.nextLine();
             System.out.print("Meses de contrato: ");
             mesesDeContrato = in.nextInt();in.nextLine();
         return new ServicioProfesional(nombre,puesto,salario,mesesDeContrato);
         }
+
         public static Empleado insertEmployed(int option) throws AlreadyExistDocumentException {
             Empleado employed;
-            String nombreDocumento, numeroDocumento;
+            String nombreDocumento="", numeroDocumento="";
+            byte cont=0;
             if(option == 1){
                 employed = requestPlazaFija();
             }
             else
                 employed = requestServicioProfesional();
             do{
-                System.out.print("\nIngrese nombre de documento (dejar vacio aborta solicitud) : ");
+                System.out.print("\nIngrese nombre de documento (Enter para abortar solicitud): ");
                 nombreDocumento= in.nextLine();
                 if (!nombreDocumento.isEmpty()){
-                    System.out.print("Ingrese el número del documento : ");
+                    cont++;
+                    System.out.print("Ingrese el número del documento: ");
                     numeroDocumento = in.nextLine();
                     employed.addDocumento(new Documento(nombreDocumento,numeroDocumento));
                 }
-            }while((!nombreDocumento.equals("")));
+                else if(cont==0)
+                    System.out.println("Debe ingresar al menos un documento");
+            }while((!nombreDocumento.equals(""))||(cont==0));
             return employed;
         }
 }

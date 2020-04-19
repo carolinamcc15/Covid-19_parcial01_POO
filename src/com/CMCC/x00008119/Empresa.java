@@ -19,8 +19,11 @@ public class Empresa {
         return planilla;
     }
 
-    public void addEmpleado(Empleado empleado){
-    planilla.add(empleado);
+    public void addEmpleado(Empleado empleado) throws InvalidSalaryException {
+        if (empleado.getSalario()>0)
+        planilla.add(empleado);
+        else
+        throw new InvalidSalaryException("\nHubo un error. El salario ingresado no es válido");
     }
 
     public void quitEmpleado(String empleado) throws NotFoundEmployedException {
@@ -31,6 +34,6 @@ public class Empresa {
         }
         if (empleadoEncontrado)
         planilla.removeIf(e -> (e.getNombre().equalsIgnoreCase(empleado)));
-        else throw new NotFoundEmployedException("El empleado no se encuentra en la planilla.\n");
+        else throw new NotFoundEmployedException("El empleado no se encuentra en la planilla.");
     }
 }
