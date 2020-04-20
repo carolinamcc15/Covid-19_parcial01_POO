@@ -19,7 +19,11 @@ public class Empresa {
         return planilla;
     }
 
-    public void addEmpleado(Empleado empleado) {
+    public void addEmpleado(Empleado empleado) throws AlreadyExistEmployeeException {
+        for (Empleado auxEmpleado : planilla){
+            if (auxEmpleado.nombre.equalsIgnoreCase(empleado.nombre))
+                throw new AlreadyExistEmployeeException("El empleado " + empleado.nombre + " ya ha sido registrado en planilla.");
+        }
         planilla.add(empleado);
     }
 

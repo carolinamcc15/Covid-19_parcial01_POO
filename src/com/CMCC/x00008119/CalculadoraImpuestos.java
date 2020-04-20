@@ -1,7 +1,4 @@
 package com.CMCC.x00008119;
-
-import java.text.DecimalFormat;
-
 public final class CalculadoraImpuestos {
     private static double totalRenta=0;
     private static double totalISSS=0;

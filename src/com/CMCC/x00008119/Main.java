@@ -1,5 +1,4 @@
 package com.CMCC.x00008119;
-import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -8,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         in.useLocale(Locale.US); //Permite el uso de '.' como separador decimal
         Empresa covid = new Empresa("Covid-19");
-        byte option=0, op;
+        byte option, op;
         do {
             try{
             System.out.print("\nIngrese una opción:\n" +
@@ -52,7 +51,7 @@ public class Main {
                       catch (InvalidNumberException e) {
                             System.out.println("\nError. Algunos valores numéricos son inválidos \nIngreso de empleado abortado.");
                         }
-                    catch (AlreadyExistDocumentException | EmptyFieldException e){
+                    catch (AlreadyExistDocumentException |AlreadyExistEmployeeException| EmptyFieldException e){
                     System.out.println(e.getMessage() + "\nEl ingreso de empleado ha sido abortado.");
                 }
                 break;
@@ -105,7 +104,6 @@ public class Main {
                 }
             }
         }
-
     //Busca empleado ingresado por el usuario y descuenta los impuestos
         public static void calculateSalary(Empresa empresa) throws EmptyFieldException{
             byte cont = 0;
@@ -127,8 +125,8 @@ public class Main {
         }
         public static PlazaFija requestPlazaFija() throws EmptyFieldException, InvalidNumberException{
             String nombre,puesto;
-            double salario=0;
-            int extension=0;
+            double salario;
+            int extension;
             System.out.print("\nNombre: ");
             nombre = in.nextLine();
             System.out.print("Puesto: ");
@@ -145,8 +143,8 @@ public class Main {
         }
         public static ServicioProfesional requestServicioProfesional() throws EmptyFieldException, InvalidNumberException {
             String nombre, puesto;
-            double salario=0;
-            int mesesDeContrato=0;
+            double salario;
+            int mesesDeContrato;
             System.out.print("\nNombre: ");
             nombre = in.nextLine();
             System.out.print("Puesto: ");
@@ -183,7 +181,7 @@ public class Main {
                         cont++;
                     }
                     else
-                    System.out.println("Error. El documento no pudo ser guardado debido a campos incompletos.");
+                    System.out.println("El documento no pudo ser guardado debido a campos incompletos.");
                 }
                 else if(cont==0)
                     System.out.println("Debe ingresar al menos un documento.");
