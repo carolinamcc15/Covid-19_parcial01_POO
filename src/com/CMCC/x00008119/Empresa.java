@@ -18,10 +18,25 @@ public class Empresa {
     public ArrayList<Empleado> getPlanilla() {
         return planilla;
     }
-    public void addEmpleado(Empleado empleado){
 
+    public void addEmpleado(Empleado empleado) throws AlreadyExistEmployeeException {
+        for (Empleado auxEmpleado : planilla){
+            if (auxEmpleado.nombre.equalsIgnoreCase(empleado.nombre))
+                throw new AlreadyExistEmployeeException("El empleado " + empleado.nombre + " ya ha sido registrado en planilla.");
+        }
+        planilla.add(empleado);
     }
-    public void quitEmpleado(String empleado){
 
+    public void quitEmpleado(String empleado) throws NotFoundEmployedException, EmptyFieldException {
+        boolean empleadoEncontrado = false;
+        if (empleado.isEmpty())
+            throw new EmptyFieldException("Debe ingresar un nombre.");
+        for (Empleado e : planilla){
+            if (e.getNombre().equalsIgnoreCase(empleado))
+                empleadoEncontrado=true;
+        }
+        if (empleadoEncontrado)
+        planilla.removeIf(e -> (e.getNombre().equalsIgnoreCase(empleado)));
+        else throw new NotFoundEmployedException("El empleado no se encuentra en la planilla.");
     }
 }
